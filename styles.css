@@ -242,6 +242,40 @@ html[lang="fr"] .lang-fr { display: revert; }
   color: var(--ink);
 }
 
+/* Paragraphe d'intro, avant les cartes */
+.doc .lead {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0 0 28px;
+  max-width: 62ch;
+}
+
+/* Sections en cartes — reprend les cartes « années passées » de l'app :
+ * une teinte de strate par section, coin 16px, label meta teinté. */
+.cards { display: flex; flex-direction: column; gap: 14px; }
+
+.card { border-radius: var(--radius-card); padding: 18px 20px; }
+.card h2 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin: 0 0 9px;
+}
+.card p { margin: 0 0 10px; font-size: 15px; line-height: 1.55; }
+.card p:last-child { margin-bottom: 0; }
+.card ul { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.6; }
+.card li { margin: 0 0 4px; }
+.card a { text-underline-offset: 2px; }
+
+/* Teintes des strates (année) — fond / label / texte, identiques à l'app */
+.h-sage     { background: #C9DCC4; } .h-sage h2     { color: #4C6647; } .h-sage p,     .h-sage li,     .h-sage a     { color: #33402F; }
+.h-sky      { background: #C3DAEC; } .h-sky h2      { color: #476785; } .h-sky p,      .h-sky li,      .h-sky a      { color: #2D4459; }
+.h-butter   { background: #F4E4AF; } .h-butter h2   { color: #8A7431; } .h-butter p,   .h-butter li,   .h-butter a   { color: #5C4D1E; }
+.h-blush    { background: #F6CBD6; } .h-blush h2    { color: #9A5A70; } .h-blush p,    .h-blush li,    .h-blush a    { color: #6B3549; }
+.h-lavender { background: #D3CBEF; } .h-lavender h2 { color: #6D5FA3; } .h-lavender p, .h-lavender li, .h-lavender a { color: #453A70; }
+.h-peach    { background: #F8CDB4; } .h-peach h2    { color: #A0623C; } .h-peach p,    .h-peach li,    .h-peach a    { color: #6E3F22; }
+
 .doc__footer {
   margin-top: 64px;
   padding-top: 20px;
