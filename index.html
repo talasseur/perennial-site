@@ -1,35 +1,63 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perennial</title>
-  <meta name="description" content="Perennial — une question par jour, revisitée chaque année. Regarde tes réponses s'empiler comme des strates au fil du temps." />
-  <meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#2E2A24" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="One question a day. It returns every year. See how far you've come." />
+  <meta name="theme-color" content="#FBF8F3" />
   <link rel="icon" href="assets/strata.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  <script>try{var l=localStorage.getItem('perennial-lang');document.documentElement.lang=(l==='fr'||l==='en')?l:'en';}catch(e){document.documentElement.lang='en';}</script>
 </head>
 <body>
+  <div class="langswitch" role="group" aria-label="Language">
+    <button type="button" data-setlang="en">EN</button>
+    <span class="sep" aria-hidden="true">/</span>
+    <button type="button" data-setlang="fr">FR</button>
+  </div>
+
   <main class="hero">
     <img class="hero__strata" src="assets/strata.svg" alt="" aria-hidden="true" />
 
     <div class="hero__content">
-      <h1 class="hero__title">Perennial</h1>
+      <h1 class="hero__title">
+        <span class="lang-en">One question a day.<br />It returns every year.</span>
+        <span class="lang-fr">Chaque jour, une question.<br />Elle revient chaque année.</span>
+      </h1>
       <p class="hero__tagline">
-        Une question par jour, revisitée chaque année.<br />
-        Tes réponses s'empilent comme des strates, et tu regardes le temps passer.
+        <span class="lang-en">See how far you’ve come.</span>
+        <span class="lang-fr">Mesure le chemin parcouru.</span>
       </p>
-      <p class="hero__note">Bientôt disponible sur iOS.</p>
+
+      <!-- TODO: remplacer "#" par le lien App Store une fois l'app publiée -->
+      <a class="btn-appstore" href="#" aria-label="Download on the App Store">
+        <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span class="lang-en">Download on the App Store</span>
+        <span class="lang-fr">Télécharger sur l’App Store</span>
+      </a>
+
+      <p class="hero__note">
+        <span class="lang-en">Coming soon on iOS.</span>
+        <span class="lang-fr">Bientôt disponible sur iOS.</span>
+      </p>
     </div>
 
-    <nav class="hero__links" aria-label="Liens légaux">
-      <a href="confidentialite.html">Politique de confidentialité</a>
+    <nav class="hero__links" aria-label="Legal">
+      <a href="privacy.html">
+        <span class="lang-en">Privacy Policy</span>
+        <span class="lang-fr">Politique de confidentialité</span>
+      </a>
       <span class="sep" aria-hidden="true">·</span>
-      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="terms.html">
+        <span class="lang-en">Terms of Use</span>
+        <span class="lang-fr">Conditions d’utilisation</span>
+      </a>
       <span class="sep" aria-hidden="true">·</span>
-      <a href="mailto:talasseur@outlook.fr">Contact</a>
+      <a href="mailto:contact@perennial-app.com">Contact</a>
     </nav>
   </main>
+
+  <script src="assets/lang.js"></script>
 </body>
 </html>

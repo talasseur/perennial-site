@@ -8,16 +8,22 @@ par l'App Store.
 ## Structure
 
 ```
-index.html            page d'accueil (hero « strates »)
-confidentialite.html  politique de confidentialité  ⚠️ à relire avant publication
-mentions-legales.html mentions légales              ⚠️ à compléter
-styles.css            styles (palette + tokens repris du design system de l'app)
-assets/strata.svg     le motif « strates » (identique au splash/logo de l'app)
-CNAME                 domaine personnalisé (perennial-app.com)
-.nojekyll             sert le HTML tel quel, sans traitement Jekyll
+index.html         page d'accueil (hero « strates », texte de l'onboarding, bouton App Store)
+privacy.html       politique de confidentialité  ⚠️ à relire avant publication
+terms.html         conditions d'utilisation      ⚠️ à compléter
+styles.css         styles (palette + tokens repris du design system de l'app, thème clair)
+assets/strata.svg  le motif « strates » (identique au splash/logo de l'app)
+assets/lang.js     bascule de langue EN/FR (défaut : anglais, mémorisé en localStorage)
+CNAME              domaine personnalisé (perennial-app.com)
+.nojekyll          sert le HTML tel quel, sans traitement Jekyll
 ```
 
 Aucun build : ce sont des fichiers statiques servis directement.
+
+- **Bilingue** : anglais par défaut, bouton EN/FR en haut à droite. Chaque page contient
+  les deux versions (`.lang-en` / `.lang-fr`), affichées via CSS selon `<html lang>`.
+- **Bouton App Store** : `index.html` contient un `href="#"` — le remplacer par le lien
+  réel une fois l'app publiée (marqué par un commentaire TODO).
 
 ## Aperçu en local
 
@@ -43,6 +49,7 @@ python3 -m http.server 8000
 
 ## À faire avant la mise en ligne
 
-- [ ] Relire `confidentialite.html` et l'aligner sur le comportement réel publié.
-- [ ] Compléter `mentions-legales.html` (statut de l'éditeur, hébergeur).
+- [ ] Relire `privacy.html` (EN + FR) et l'aligner sur le comportement réel publié.
+- [ ] Compléter `terms.html` (EN + FR : statut de l'éditeur, hébergeur, conditions d'abonnement).
+- [ ] Remplacer le `href="#"` du bouton App Store dans `index.html` par le vrai lien.
 - [ ] Vérifier le rendu du hero sur mobile et desktop.
