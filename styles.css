@@ -277,9 +277,7 @@ html[lang="fr"] .lang-fr { display: revert; }
 .h-peach    { background: #F8CDB4; } .h-peach h2    { color: #A0623C; } .h-peach p,    .h-peach li,    .h-peach a    { color: #6E3F22; }
 
 .doc__footer {
-  margin-top: 64px;
-  padding-top: 20px;
-  border-top: 1px solid var(--hairline);
+  margin-top: 40px;
   font-size: 13px;
   color: var(--ink-2);
 }
